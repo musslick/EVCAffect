@@ -12,8 +12,9 @@ function EVCMood_Simulation1_sampleSubjects(nSubj, parameterName, parameterValue
 
 % clear all;
 close all;
-clc;
+% clc;
 import Simulations.*;
+import EVC.*;
 
 logfile = 3;
 
@@ -113,7 +114,7 @@ if(strcmp(parameterName, 'Expected Task Difficulty') && min(parameterValues) < 1
     filePath = ['EVCMood logfiles/EVCMood_sampleSubjects_Low ' parameterName '_s' num2str(nSubj) '_' num2str(logfile) ];
 end
 disp(filePath)
-% save(filePath);
+save(filePath);
 
 end
 
