@@ -390,7 +390,7 @@ classdef DDM_Gratton < Simulations.DDMSim
            if(length(congruency) == 2)
                
 
-               trialCombs = combvec(congruency, congruencyTransition);
+               trialCombs = Simulations.combvec(congruency, congruencyTransition);
                sequenceRepetitions = ceil(this.nBalancedTrials/size(trialCombs,2));
                trialPool = repmat(trialCombs, 1, sequenceRepetitions);
 
@@ -504,7 +504,7 @@ classdef DDM_Gratton < Simulations.DDMSim
                congruencyIdx = 1;
                congrTransitionIdx = 2;
 
-               trialCombs = combvec(congruency, congruencyTransition);
+               trialCombs = Simulations.combvec(congruency, congruencyTransition);
                sequenceRepetitions = ceil(this.nTrials/size(trialCombs,2));
                trialPool = repmat(trialCombs, 1, sequenceRepetitions);
                
